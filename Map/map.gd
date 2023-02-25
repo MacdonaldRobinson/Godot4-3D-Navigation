@@ -7,8 +7,9 @@ extends Node3D
 
 func _physics_process(delta):
 	if character:
-		character.set_target_position(target.global_transform.origin)
-		
+		character.set_target_position(target.global_transform.origin)		
+	
+			
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == 1 and event.pressed:
@@ -24,5 +25,5 @@ func _unhandled_input(event):
 			print(ray_cast.get_collider())
 			
 			target.global_transform.origin = destination
-			
-			print(destination)
+	
+	
